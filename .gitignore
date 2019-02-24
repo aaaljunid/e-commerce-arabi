@@ -1,9 +1,5 @@
 package.json
 package-lock.json
 node_modules
-<<<<<<< HEAD
 build
-.gitigoner
-=======
-build
->>>>>>> 692b14266e65fd70b69e167dc5aa9f21fdf3c490
+.gitignore
