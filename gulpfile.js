@@ -25,7 +25,8 @@ gulp.task('html', function(){
 });
 
 gulp.task('css', function(){
-    var flip = gulp.src(['src/css/*.css', '!src/css/style.css']).pipe(flipper());
+    var flip = gulp.src(['src/css/*.css', '!src/css/style.css'])
+    .pipe(flipper());
     var noFlip = gulp.src('src/css/style.css');
 
     return merge(flip, noFlip)
