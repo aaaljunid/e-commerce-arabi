@@ -419,25 +419,27 @@ h3.custom-heading{
     background-color: #5C7D95;
 }
 
+
 /*تنسيق قسم الماركات العالمية*/
+
 .custom-panel{
     border: 4px solid #8BD7F4;
     border-radius: 2px;
     box-shadow: none;
     padding: 20px;
-    height: 300px;
-}
+    height: 299px;
+} 
 
 .custom-panel .product-image{
     width: 100%;
-    height: 150px;
     margin-bottom: 8px;
 }
 
 .custom-btn-primary{
     color: #849324;
-    border-color:#849324;
-    background-color: transparent; 
+    border-color: #849324;
+    background-color: transparent;
+    border-radius: 30px;
 }
 
 .custom-btn-primary:hover,
@@ -445,31 +447,43 @@ h3.custom-heading{
 .custom-btn-primary:active,
 .custom-btn-primary:active:hover,
 .custom-btn-primary:active:focus{
-    color: #8BD7F4;
-    border-color: #8BD7F4;
-    background-color: transparent;  
+    border-color: #D01217;
+    color: #D01217;
+    background-color: transparent;
+    font-weight: bold;
 }
 
-.custom-panel h4,
-.custom-panel .prices{
+.custom-panel h4, .custom-panel .price{
     font-size: 130%;
-   
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .custom-text-muted{
-    color: #a8a8a8;
+    color: #a5a5a5;
 }
+
 
 .custom-arrow-btn{
-    background-color: #fff;
-    color: #5C7D94;
+    background-color: #fff; 
+    color: #a5a5a5;
     border-color: #8BD7F4;
+    border-radius: 4px;
     box-shadow: none;
-    border-radius: 2px;
     padding: 5px 10px;
-    font-size: 12px;
+    font-size: 13px;
 }
 
+.custom-arrow-btn:hover,
+.custom-arrow-btn:focus,
+.custom-arrow-btn:active,
+.custom-arrow-btn:active:hover,
+.custom-arrow-btn:active:focus{
+    border-color: #D01217;
+    color: #D01217;
+    background-color: transparent;
+    font-weight: bold;
+}
 
 .brand-products{
     margin-bottom: 20px;
@@ -478,17 +492,130 @@ h3.custom-heading{
 .brand-text{
     display: inline-block;
 }
+ 
+.brand-nav.custom-brand-nav{
+    padding-top: 43px;
+}
 
-.brand-products .brand-nav{
-    margin-top: 35px;
+.brand-nav .custom-brandImgText,
+.brand-nav .custom-arrow-absolute {
+    position: absolute;
+}
+
+.custom-brandImgText{
+    top: 235px;
+}
+
+.custom-arrow-absolute{
+    top: 230px;
+    right: 428px;
 }
 
 
-.brand-products .custom-brand-nav-lacost{
-    margin-top: 10px;
-}
-
-#row-brands h3.custom-heading{
-    border-top: 1px solid #8BD7F4;
+#row-brand h3.custom-heading{
+    border-top: 1px solid rgb(34, 141, 177);
     padding-top: 25px;
+}
+
+
+/*تنسيقات قسم تذييل الصفحة*/
+#brand-logos{
+    background-color: rgb(255, 209, 209);
+    padding: 25px 0;
+    width: 100%;
+    color: rgb(238, 246, 255);
+}
+
+#brand-logos img{
+    margin-left: 25px;
+    margin-right: 25px;
+    max-height: 100px;
+    max-width: 100px; 
+}
+
+#footer-nav{
+    width: 100%;
+    background-color: #1f1e1e;
+    padding: 50px 0 40px;
+    background-image: url(../images/bg_footer_1.png), url(../images/bg_footer_2.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 110% 0, -10% -150%;
+}
+
+#footer-nav-links{
+    margin: 30px 0;
+}
+
+#footer-nav-links a{
+    color: #555555;
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+#footer-nav-links a:hover{
+    text-decoration: none;
+    color: #A9A9A9;
+}
+
+#footer-nav #newsletter{
+    border-top: 1px solid #292929  ;
+}
+
+#footer-nav form{
+    max-width: 260px;
+    margin: 0 auto;
+}
+
+#footer-nav form label{
+    margin: 27px 0 16px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #555555;
+}
+
+.custom-btn-primary2{
+    color: #fff;
+    background-color: orange;
+    border-color: orange;
+}
+
+.custom-btn-primary2:hover,
+.custom-btn-primary2:focus,
+.custom-btn-primary2:active,
+.custom-btn-primary2:active:hover,
+.custom-btn-primary2:active:focus,
+.custom-btn-primary2:hover:disabled{
+    background-color: rgb(255, 140, 0);
+    border-color: darkorange;
+    color:#fff;
+}
+
+#newsletter form input{
+    background-color: #313131;
+    border: none;
+    opacity: .6;
+}
+
+#newsletter form button{
+    border-radius: 0;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    font-size: 14px;
+    padding-bottom: 9px;
+
+}
+
+#footer-copyright-social{
+    background-color: #151515;
+    color: #303030;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-weight: 700;
+    width: 100%;
+}
+
+#footer-copyright-social a{
+    color: #303030;
+    margin-left: 5px;
+    margin-right: 5px;
 }
