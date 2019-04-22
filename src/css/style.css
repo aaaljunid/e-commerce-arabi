@@ -147,7 +147,7 @@ body{
 }
 
 
-/* جزء تنسيق قسم المنتجات المميزة */
+/*  تنسيق قسم المنتجات المميزة */
 #carousel-featured{
     background-color: #E7F7FC;
     height: 400px;
@@ -163,12 +163,12 @@ body{
 }
 
 #carousel-featured .carousel-item .product-details{
-    border: 1px solid #B9E7F8;
+    border: 1px solid black;
     padding: 20px;
     position: relative; 
     top: 50px;
     height: 200px;
-
+    background-color: #E7F7FC;
 }
 
 #carousel-featured .product-details .product-category{
@@ -520,26 +520,26 @@ h3.custom-heading{
 
 /*تنسيقات قسم تذييل الصفحة*/
 #brand-logos{
-    background-color: rgb(255, 209, 209);
+    background-color: #FED4D5;
     padding: 25px 0;
     width: 100%;
-    color: rgb(238, 246, 255);
-}
+    color: darkblue;
+}  
 
 #brand-logos img{
     margin-left: 25px;
     margin-right: 25px;
     max-height: 100px;
-    max-width: 100px; 
+    max-width: 100px;
 }
 
 #footer-nav{
     width: 100%;
     background-color: #1f1e1e;
     padding: 50px 0 40px;
-    background-image: url(../images/bg_footer_1.png), url(../images/bg_footer_2.png);
-    background-repeat: no-repeat, no-repeat;
-    background-position: 110% 0, -10% -150%;
+    background-image: url(../images/bg_footer_2.png), url(../images/bg_footer_2.png), url(../images/bg_footer_1.png), url(../images/bg_footer_1.png);
+    background-repeat: repeat, repeat, repeat, repeat;
+    background-position: 100% 5%, 110% 80%, -10% -2%, -20% 50%;
 }
 
 #footer-nav-links{
@@ -558,42 +558,35 @@ h3.custom-heading{
 }
 
 #footer-nav #newsletter{
-    border-top: 1px solid #292929  ;
+    border-top: 1px solid #292929;
 }
 
 #footer-nav form{
     max-width: 260px;
-    margin: 0 auto;
+    margin:0 auto;
 }
 
 #footer-nav form label{
     margin: 27px 0 16px;
     font-size: 12px;
-    font-weight: bold;
     color: #555555;
+    font-weight: bold;
 }
 
 .custom-btn-primary2{
-    color: #fff;
-    background-color: orange;
+    padding-top: 9px;
     border-color: orange;
+    background-color: orange;
+    color: #fff;
 }
 
 .custom-btn-primary2:hover,
 .custom-btn-primary2:focus,
 .custom-btn-primary2:active,
 .custom-btn-primary2:active:hover,
-.custom-btn-primary2:active:focus,
-.custom-btn-primary2:hover:disabled{
-    background-color: rgb(255, 140, 0);
-    border-color: darkorange;
-    color:#fff;
-}
-
-#newsletter form input{
-    background-color: #313131;
-    border: none;
-    opacity: .6;
+.custom-btn-primary2:active:focus{
+    background-color: darkgoldenrod;
+    border-color: darkgoldenrod;
 }
 
 #newsletter form button{
@@ -601,7 +594,13 @@ h3.custom-heading{
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
     font-size: 14px;
-    padding-bottom: 9px;
+    color: inherit;
+}
+
+#newsletter form input{
+    background-color: #313131;
+    opacity: .6;
+    border: none;
 
 }
 
@@ -618,4 +617,110 @@ h3.custom-heading{
     color: #303030;
     margin-left: 5px;
     margin-right: 5px;
+}
+
+
+/*******************************************************************
+***************************
+
+MEDIA QUERY
+
+***************************
+*******************************************************************/
+@media (max-width: 1199px) {
+    .custom-navbar .navbar-nav li a.nav-link{
+        padding: 8px;
+    }
+    #carousel-featured .custom-carousel-indicators-primary {
+        right: -7%;
+    }
+}
+
+
+@media (max-width: 991px) {
+    .custom-navbar .container{
+        max-width: 100%;
+    }
+    .navbar-header{
+        display: block;
+        width: 100%; 
+        margin: 11px 15px 23px 5px;
+    }
+    .navbar-header .custom-btn{
+        float: left;
+    }
+
+    .custom-navbar{
+        padding: 0.5rem 0px 30px;
+    }
+
+    .form-inline{
+        width: 100%;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        padding: 10px 0;
+    }
+
+    .form-inline .dropdown{
+        display: none;
+    }
+
+    .form-inline .custom-form-control{
+        width: 86%;
+        margin-right: 2%;
+    }
+
+    .form-inline .custom-btn-primary{
+        width: 10%;
+    }
+
+    .custom-navbar button.btn-icon,
+    .custom-navbar a.btn-icon {
+        padding: 10px;
+        margin-right: 5px;
+        margin-top: 4px;
+        margin-left: 10px;
+    }
+
+    .navbar-header .btn-icon i{
+        font-size: 19px;
+    }
+
+    .custom-navbar .navbar-nav li a.nav-link{
+        padding: 10px 15px;
+    }
+
+    .navbar-collapse {
+        border-top: 1px solid #eee;
+        margin-top: 15px;
+        padding-top: 8px;
+    }
+
+    #carousel-featured .custom-carousel-indicators-primary {
+        right: -25%;
+    }
+}
+
+
+@media (max-width: 767px) {
+    #carousel-featured, #carousel-featured .product-details{
+        height: auto;
+    }
+
+    #carousel-featured .product-details{
+        position: static;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 575px) {
+    .form-inline .custom-form-control{
+        width: 76%;
+        margin-right: 2%;
+    }
+
+    .form-inline .custom-btn-primary{
+        width: 20%;
+    }
 }

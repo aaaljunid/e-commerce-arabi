@@ -3,6 +3,7 @@
     <head>
         <title>الصفحة الرئيسية</title>
         <meta charset="utf-8">
+        <meta name="viewport" content="widt=device-width, initial-scale=1">
         <link rel="stylesheet" href="./css/all.css">
         <link rel="stylesheet" href="./css/bootstrap.css">
         <link rel="stylesheet" href="./css/style.css">
@@ -16,6 +17,12 @@
                 <nav class="navbar navbar-expand-lg custom-navbar">
                     <div class="container">
                         <div class="navbar-header">
+                            <button class="navbar-toggler collapsed btn custom-btn btn-icon" data-toggle="collapse" data-target="#navbar-collapsed-menu">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                            <a href="checkgout.html" class="navbar-toggler btn custom-btn btn-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
                             <a href="#" class="navbar-brand">
                                 <img src="./images/logo.png" alt="شعار المتجر">
                             </a>
@@ -55,38 +62,40 @@
                             </div>
                             <button class="btn custom-btn-primary" type="submit">ابحث</button>
                         </form>
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item active">
-                                <a href="#" class="nav-link">الصفحة الرئيسية</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdwon" rol="button" data-toggle="dropdown" aria-expanded="false">
-                                    اقسام المتجر
-                                </a>
-                                <ul class="dropdown-menu custom-dropdown-menu">
-                                    <li class="dropdown-item">
-                                        <a href=".">رجالي</a>
-                                    </li>
-                                    <li class="dropdown-item">
-                                        <a href=".">نسائي</a>
-                                    </li>
-                                    <li class="dropdown-item">
-                                        <a href=".">أطفال</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">البحث المتقدم</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">تواصل معنا</a>
-                            </li>
-                            <li>
-                                <a href="checkgout.html" id="btn-shopping-cart" class="btn custom-btn btn-icon" title="عربة الشراء" data-toggle="tooltip" data-placement="bottom">
-                                    <i class="fas fa-shopping-cart"></i>
-                                </a>
-                            </li>
-                        </ul>
+                        <div class="collapse navbar-collapse" id="navbar-collapsed-menu">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active">
+                                    <a href="#" class="nav-link">الصفحة الرئيسية</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdwon" rol="button" data-toggle="dropdown" aria-expanded="false">
+                                        اقسام المتجر
+                                    </a>
+                                    <ul class="dropdown-menu custom-dropdown-menu">
+                                        <li class="dropdown-item">
+                                            <a href=".">رجالي</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href=".">نسائي</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href=".">أطفال</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">البحث المتقدم</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">تواصل معنا</a>
+                                </li>
+                                <li class="d-none d-lg-block">
+                                    <a href="checkgout.html" id="btn-shopping-cart" class="btn custom-btn btn-icon" title="عربة الشراء" data-toggle="tooltip" data-placement="bottom">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </nav>
             </div>
@@ -101,10 +110,10 @@
                              <div class="carousel-item active">
                                  <div class="container">
                                     <div class="row">
-                                        <div class="col-4 offset-2">
+                                        <div class="col-12 col-md-4 offset-lg-2">
                                             <img src="./images/lacoste_1.png" alt="تيشرت رجالي ازرق من لاكوست">
                                         </div>
-                                        <div class="col-5">
+                                        <div class="col-12 col-md-8 col-lg-5">
                                             <div class="product-details">
                                                 <div class="sale large">
                                                     50% 
@@ -121,10 +130,10 @@
                              <div class="carousel-item">
                                  <div class="container">
                                     <div class="row">
-                                        <div class="col-4 offset-2">
+                                        <div class="col-12 col-md-4 offset-lg-2">
                                             <img src="./images/lacoste_2.png" alt="شنطة حمرة نسائية من لاكوست">
                                         </div>
-                                        <div class="col-5">
+                                        <div class="col-12 col-md-8 col-lg-5">
                                             <div class="product-details">
                                                 <div class="sale large">
                                                     50% 
@@ -141,10 +150,10 @@
                              <div class="carousel-item">
                                  <div class="container">
                                      <div class="row">
-                                         <div class="col-4 offset-2">
+                                         <div class="col-12 col-md-4 offset-lg-2">
                                              <img src="./images/adidas_3.png" alt="جاكيت رياضي اسود رجالي من ادي داس">
                                          </div>
-                                         <div class="col-5">
+                                         <div class="col-12 col-md-8 col-lg-5">
                                              <div class="product-details">
                                                  <div class="sale large">
                                                     50% 
@@ -161,10 +170,10 @@
                              <div class="carousel-item">
                                  <div class="container">
                                      <div class="row">
-                                         <div class="col-4 offset-2">
+                                         <div class="col-12 col-md-4 offset-lg-2">
                                              <img src="./images/lacoste_3.png" alt="قميص تاروهات كت من لاكوست">
                                          </div>
-                                         <div class="col-5">
+                                         <div class="col-12 col-md-8 col-lg-5">
                                              <div class="product-details">
                                                  <div class="sale large">
                                                     50% 
@@ -1034,11 +1043,12 @@
                         <img src="./images/polo.png" alt="شعار بولو">
                     </div>
                 </div>
+
                 <div id="footer-nav">
                     <div class="container-fluid text-center">
                         <div class="footer-logo">
                             <a href=".">
-                                <img src="./images/logo_footer.png" alt="شعار الموقع في صفحة التذييل">
+                                <img src="./images/logo_footer.png" alt="شعار الموقع">
                             </a>
                         </div>
                         <div id="footer-nav-links" class="col-12">
@@ -1049,17 +1059,17 @@
                         <div id="newsletter" class="col-6 offset-3">
                             <form class="form">
                                 <label for="footer-email">
-                                    تابع النشرة البريدية للعروض
+                                    تابع النشرة البريدية لأحدث العروض
                                 </label>
                                 <br>
                                 <div class="input-group">
-                                    <input id="footer-email" class="form-control custom-form-control" type="email"
-                                     placeholder="البريد الالكتروني" name="email" require>
-                                     <div class="input-group-btn">
-                                         <button type="submit" class="btn btn-primary custom-btn custom-btn-primary2">
-                                             متابعة
-                                         </button>
-                                     </div>
+                                    <input id="footer-email" class="form-control custom-form-control"
+                                    type="email" placeholder="البريد الإلكتروني" name="email" require>
+                                    <div class="input-group-btn">
+                                        <button type="submit" class="btn btn-primary custom-btn custom-btn-primary2">
+                                            اشتراك
+                                        </button>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -1070,26 +1080,25 @@
                     <div class="container">
                         <div class="clearfix">
                             <div id="copyright" class="float-left">
-                                جميع الحقوق محفوظة للمتجر لسنة 2019
+                                جميع الحقوق محفوظة للمتجر لسنة 2018
                             </div>
-                            <div id="social-icons" class="float-right">
-                                <a href="https://www.facebook.com">
-                                    <i class="fab fa-facebook-square fa-lg"></i>
-                                </a>
-                                <a href="https://www.twitter.com">
-                                    <i class="fab fa-twitter-square fa-lg"></i>
-                                </a>
-                                <a href="https:www.instagram.com">
+                            <div id="soical-icons" class="float-right">
+                                <a href="https://instagram.com">
                                     <i class="fab fa-instagram fa-lg"></i>
                                 </a>
+                                <a href="https://facebock.com">
+                                    <i class="fab fa-facebook-square fa-lg"></i>
+                                </a>
+                                <a href="https://twitter.com">
+                                    <i class="fab fa-twitter-square fa-lg"></i>
+                                </a>
                             </div>
-                        </div> 
+                        </div>
                     </div>
                 </div>
-            </div><!--نهاية قسم تذييل الصفحة-->
+            </div><!--نهاية تذليل الصفحة-->
 
             </div><!--نهاية بناء الصفحة-->
-
         <script src="./js/jquery-slim.min.js"></script>
         <script src="./js/popper.min.js"></script>
         <script src="./js/bootstrap.js"></script>
