@@ -785,6 +785,112 @@ Product Page
 
 
 
+/*****************************************************************
+*******************************
+
+Checkout Page
+
+*******************************
+*****************************************************************/
+
+h1.custom-heading {
+    font-size: 36px;
+    margin: 25px 0;
+}
+
+.custom-table .custom-media .media-object {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #EBEBEB;
+    margin-left: 10px;
+}
+
+.custom-table th,
+.custom-table td {
+    padding: 15px;
+    border-bottom: 1px solid #8BD7F4;
+    border-top: 1px solid #8BD7F4;
+    font-size: 120%;
+}
+
+.custom-table th:first-child, 
+.custom-table td:first-child {
+    width: 50%;
+}
+
+.custom-table th {
+    color: #c2c2c2;
+    font-size: normal;
+}
+
+.custom-table th:not(:first-child),
+.custom-table td:not(:first-child){
+    text-align: center;
+}
+
+.custom-table .custom-media h4 {
+    font-size: 18px;
+    margin: 12px 0;
+}
+
+.custom-table .quantity {
+    width: 56px;
+    height: 34px !important;
+    padding: 0 8px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.custom-btn-danger {
+    background-color: transparent;
+    color: #ff5a5f;
+    border-color: #ff5a5f;
+    border-radius: 3px;
+}
+
+.custom-btn-danger:hover,
+.custom-btn-danger:active,
+.custom-btn-danger:focus,
+.custom-btn-danger:active:focus,
+.custom-btn-danger:active:hover {
+    background-color: transparent;
+    color: #c21013;
+    border-color: #c21013;
+}
+
+.custom-table .custom-media {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;    
+}
+
+.custom-table th:first-child {
+    padding-right: 20px;
+}
+
+
+.custom-table tfoot td {
+    border-bottom: none;
+    font-size: 150%;
+}
+
+
+#form-checkout button[type=submit] {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.custom-table .totalPrice * {
+    color: #000;
+}
+
+.custom-table .totalPrice .custom-text-muted .custom-text-muted {
+    color: #A9A9A9;
+}
+
+
 
 /*******************************************************************
 ***************************
@@ -799,13 +905,6 @@ MEDIA QUERY
         padding: 9px;
     }
 
-}
-
-
-@media (max-width:991.98px) and (min-width:768.98px) {
-    .custom-thumbinal img {
-        height: 200px;
-    }
 }
 
 
@@ -904,7 +1003,22 @@ MEDIA QUERY
     }
 
 
+    /*checkout page*/
+    #form-checkout, 
+    .table-title {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
 }
+
+
+@media (max-width:991.98px) and (min-width:768.98px) {
+    .custom-thumbinal img {
+        height: 200px;
+    }
+}
+
 
 
 @media (max-width:767.98px) {

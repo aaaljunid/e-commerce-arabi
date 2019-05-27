@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html dir="rtl">
+    <head>
+        <title>JavaScript</title>
+        <meta charset="utf-8">
+        <style>
+                .completed
+                {
+                    color : gray ;
+                    text-decoration:line-through;
+                    list-style:disc;
+                }    
+        </style>
+    </head>
+    <body>
+        <h1>قائمة المشتريات</h1>
+        <ul id="shoopingList">
+            <li id="apple">تفاح</li>
+            <li>جزر</li>
+            <li>خوخ</li>
+        </ul>
+        <form>
+            <label>
+                اضف عنصر جديد :
+                <input id="newItem">
+                <input type="submit" value="اضف عنصر">
+            </label>
+        </form>
+        <h1>دورات ارغب بتعلمها</h1>
+        <ol id="courses">
+            <li>تطوير المواقع forentEnd</li>
+            <li>تطوير المواقف backend</li>
+            <li>تطوير تطبيقات الاجهزة الذكية</li>
+        </ol>
+    </body>
+    <script>
+    var heading = document.querySelector("h1");
+    heading.textContent = "قائمة الفواكة";
+    heading.style.color = "gray";
+    </script>
+    <br>
+    <script>
+        var grape = document.createElement("li");
+        grape.textContent = "العنب";
+        var shooping = document.querySelector("#shoopingList");
+        shooping.appendChild(grape);
+    </script>
+    <br>    
+    <script>
+        var shooping = document.querySelector("#shoopingList");
+        var apple = document.querySelector("#apple");
+        shooping.removeChild(apple);
+    </script>
+    <!--for loope-->
+    <script>
+        var headingName = document.createElement("h1");
+        headingName.textContent = "قائمة بأسماء الموظفين ";
+        document.body.appendChild(headingName);
+        var bestf = [
+            "فيصل",
+            "سعد",
+            "زياد",
+            "عبدالرحمن"
+        ];
+        var list = document.createElement("ol");
+        for(var i=0; i<bestf.length; i=i+1){
+            var listItem = document.createElement("li");
+            listItem.textContent = bestf[i]; 
+            list.appendChild(listItem);
+        }
+        document.body.appendChild(list);
+    </script>
+    <br>
+    <script>
+    var headName = document.createElement("h1");
+    headName.textContent = "قائمة الموظفين";
+    document.body.appendChild(headName);
+
+    var employee = [
+        "Abdurahman",
+        "Saleh",
+        "Ahmed"
+    ];
+    var list = document.createElement("ul");
+    for(i=0; i<employee.length; i=i+1){
+        createList(employee[i]);
+    }
+
+    function createList(emplyeeName){
+        var listItem = document.createElement('li');
+        listItem.textContent = emplyeeName;
+        list.appendChild(listItem);
+    }
+
+    document.body.appendChild(list);
+    </script>
+    <br>
+    <script>
+        //لإنشاء عنوان بطريقة forEach
+        var topic = document.createElement('h1');
+        topic.textContent = "طريقة ForEach";
+        document.body.appendChild(topic);
+     
+        var  topStudent = [
+            "zamel",
+            "abdullah",
+            "mobark"
+        ];
+        var list = document.createElement("ul");
+        topStudent.forEach(createItem);
+        document.body.appendChild(list);
+
+        function createItem(studentName) { 
+            var listItem = document.createElement("li"); 
+            listItem.textContent = studentName;
+            list.appendChild(listItem);
+        } 
+    </script>
+    <br>
+    <script>
+    var forHeading = document.createElement("h1");
+    forHeading.textContent = "قائمة For Loop";
+    document.body.appendChild(forHeading);
+   
+    var listLoop = [
+        "loop 1",
+        "loop 2",
+        "loop 3"
+    ];
+
+    var Olist = document.createElement("ol");
+
+    for(var i=0; i<listLoop.length; i=i+1){
+        var listItem = document.createElement('li');
+        listItem.textContent = listLoop[i];
+        Olist.appendChild(listItem);
+    }
+
+    document.body.appendChild(Olist);
+    </script>
+
+
+    <script>
+    var badeelLoop = document.createElement("h1");
+    badeelLoop.textContent = "بديل محتويات اللوووب وهوالـ function";
+    document.body.appendChild(badeelLoop);
+
+    var listLoop = [
+        'loop',
+        'loop',
+        'loop'
+    ];
+
+    var orderL = document.createElement("ol");
+    function createItem(newItem){
+        var listItem = document.createElement("li");
+        listItem.textContent = newItem;
+        orderL.appendChild(listItem);
+    }
+
+    for(var i=0; i<listLoop.length; i=i+1){
+        createItem(listLoop[i]);
+    }
+
+    document.body.appendChild(orderL);
+    </script>
+
+    <br>
+    <script>
+    var headForeach = document.createElement("h1");
+    headForeach.textContent = "بديل الـ  for Loop وهو forEach";
+    document.body.appendChild(headForeach);
+    
+    var forEachOl = document.createElement("ol");
+
+    var listForeach = [
+        "forEeach",
+        "forEach",
+        "forEach"
+    ];
+
+    function createListForeach(listname){
+        var listItem  = document.createElement("li");
+        listItem.textContent  = listname;
+        forEachOl.appendChild(listItem);
+    }
+
+    listForeach.forEach(createListForeach);
+
+    document.body.appendChild(forEachOl);
+    </script>
+
+    <br>
+    <!--while-->
+    <script>
+        var whileTopic = document.createElement("h1");
+        whileTopic.textContent = "انشاء قائمة عن طريق الـ while ";
+        document.body.appendChild(whileTopic);
+
+        var names = [
+            "while",
+            "while",
+            "while"
+        ];
+
+        var olist = document.createElement("ol");
+
+        var i =0;
+        while(i<names.length){
+            var newlist = document.createElement('li');
+            newlist.textContent = names[i];
+            olist.appendChild(newlist);
+            i = i+1;
+            
+        }
+
+        document.body.appendChild(olist);
+    </script>
+
+    <br>
+    <script>
+        var whileTopic = document.createElement("h1");
+        whileTopic.textContent = "طريقة انشاء قائمة عن طريق while loop مع function";
+        whileTopic.style.color = "blue";
+        document.body.appendChild(whileTopic);
+
+        var names = [
+            "while",
+            "while",
+            "while"
+        ];
+
+        var olist = document.createElement("ol");
+
+        function createlist(namesList){
+            var newlist = document.createElement('li');
+            newlist.textContent = namesList
+            olist.appendChild(newlist);
+        }
+        var i =0;
+        while(i<names.length){
+            createlist(names[i]);
+            i++;
+            
+        }
+
+        document.body.appendChild(olist);
+    </script>
+    
+    <br>
+    <script>
+        var doWhileTopic = document.createElement("h1");
+        doWhileTopic.textContent = "انشاء قائمة عن طريق do while";
+        document.body.appendChild(doWhileTopic);
+
+        var dolist = [
+            "do while",
+            "do while",
+            "do while"
+        ];
+
+        var olist = document.createElement("ol");
+
+        var i = 0;
+        do {
+            var newList = document.createElement("li");
+            newList.textContent = dolist[i];
+            olist.appendChild(newList);
+            i = i + 1;
+        }
+        while (i < dolist.length);
+        document.body.appendChild(olist);
+
+    </script>
+    <br>
+    <script>
+        var doWhileTopic = document.createElement("h1");
+        doWhileTopic.textContent = "انشاء قائمة بستخدام do while مع function";
+        document.body.appendChild(doWhileTopic);
+
+        var dolist = [
+            "do while",
+            "do while",
+            "do while"
+        ];
+
+        var olist = document.createElement("ol");
+
+        function createByDo(nameslist){
+            var newList = document.createElement("li");
+            newList.textContent = nameslist;
+            olist.appendChild(newList);
+        }
+
+        var i = 0;
+        do {
+            createByDo(dolist[i]);
+            i = i + 1;
+        }
+        while (i < dolist.length);
+        document.body.appendChild(olist);
+    </script>
+
+    <!--الاحداث events-->
+    <br>
+    <script>
+        document.querySelectorAll("li").forEach(function (li){
+            li.addEventListener('click', function (e){
+                if(e.target.className === "completed"){
+                    e.target.className = "";
+                }
+                else{
+                    e.target.className = "completed";
+                }
+            })
+        });
+    </script>
+    <!--لاضافة عنصر في القائمة بستخدام زر الإضافة-->
+    <script>
+        var form = document.querySelector('form');
+        function addListItem(e){
+            e.preventDefault();
+            var input = document.getElementById("newItem");
+            var item = document.createElement("li");
+            item.textContent = input.value;
+            var shopping = document.getElementById("shoopingList");
+            shopping.appendChild(item); 
+        }
+        form.addEventListener('submit', addListItem);
+    </script>
+    <!--
+    <script>
+        function f(x) {
+            return (2+x) * 4;
+        }
+        result = f(6);
+        document.write(" النتيجية =" + " " + result);
+    </script>
+    <br>
+    <script>
+    var name = prompt("ما هو اسمك");
+    document.write(" مرحبا يا " + name);
+    </script>
+    <br>
+    <br>
+    <script>
+    var firstval = prompt("ادخل القيمة الاولى");
+    var secondval = prompt("ادخل القيمة الثانية");
+    firstval = Number(firstval);
+    secondval = Number(secondval);
+    var sum = firstval + secondval;
+    document.write(" المجموع: " + sum);
+    </script>
+--> 
+
+<!--درس المصفوفة
+    <script>
+        var topf = [
+            "saad",
+            "ziyad",
+            "faisal",
+            "abdurahman"
+        ];
+
+        document.write(topf[2]);
+    </script>
+    <br>
+    <script>
+            var topf = [
+                "saad",
+                "ziyad",
+                "faisal",
+                "abdurahman"
+            ];
+    
+            document.write(topf.length);
+        </script>
+        <br>
+        <script>
+            var topf = [
+                "saad",
+                "ziyad",
+                "faisal",
+                "abdurahman"
+            ];
+    
+            document.write(topf.join());
+        </script>
+        <br>
+        <script>
+            var topf = [
+                "saad",
+                "ziyad",
+                "faisal",
+                "abdurahman"
+            ];
+    
+            document.write(topf.join('-'));
+        </script>
+        <br>
+        <script>
+            var topf = [
+                "saad",
+                "ziyad",
+                "faisal",
+                "abdurahman"
+            ];
+            topf.push("hashem");
+            document.write(topf.join('-'));
+        </script> 
+         <br>
+         <script>
+             var topf = [
+                 "saad",
+                 "ziyad",
+                 "faisal",
+                 "abdurahman"
+             ];
+             topf.pop();
+             document.write(topf.join('-'));
+         </script> 
+          <br>
+          <script>
+              var topf = [
+                  "saad",
+                  "ziyad",
+                  "faisal",
+                  "abdurahman"
+              ];
+              topf.pop();
+              topf.push("hashem");
+              document.write(topf.join('-'));
+          </script> 
+           <br>
+           <script>
+               var topf = [
+                   "saad",
+                   "ziyad",
+                   "faisal",
+                   "abdurahman"
+               ];
+               topf[2]= "hashem";
+               document.write(topf.join('-'));
+           </script> 
+        -->
+
+</html>

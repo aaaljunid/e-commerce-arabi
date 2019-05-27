@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html dir="rtl">
+    <head>
+        <title>JQuery</title>
+        <meta charset="utf-8">
+        <style>
+                .completed
+                {
+                    color : gray ;
+                    text-decoration:line-through;
+                    list-style:disc;
+                }    
+        </style>
+    </head>
+    <body>
+        <h1>قائمة المشتريات</h1>
+        <ul id="shoopingList">
+            <li id="apple">تفاح</li>
+            <li>جزر</li>
+            <li>خوخ</li>
+        </ul>
+        <form>
+            <label>
+                اضف عنصر جديد :
+                <input id="newItem">
+                <input type="submit" value="اضف عنصر">
+            </label>
+        </form>
+        <h1>دورات ارغب بتعلمها</h1>
+        <ol id="courses">
+            <li>تطوير المواقع forentEnd</li>
+            <li>تطوير المواقف backend</li>
+            <li>تطوير تطبيقات الاجهزة الذكية</li>
+        </ol>
+    </body>
+    <script src="js/jquery-slim.min.js"></script>
+    <script>
+        var $heading = $("h1").first();
+        $heading.text("قائمة الفواكة");
+        $heading.css("color", "red");
+  
+        var $grape = $("<li></li>");
+        $grape.text("العنب");
+        var $shooping = $("#shoopingList");
+        $shooping.append($grape);
+    </script>
+    <br>    
+    <script>
+        var $shooping = $("#shoopingList");
+        var $apple = $("#apple");
+        $apple.remove();
+    </script>
+    <!--for loope-->
+    <script>
+        var $headingName = $("<h1></h1>");
+        $headingName.text("قائمة بأسماء الموظفين ");
+        $("body").append($headingName);
+        var $bestf = [
+            "فيصل",
+            "سعد",
+            "زياد",
+            "عبدالرحمن"
+        ];
+        var $Olist = $("<ol></ol>");
+        
+        for(var i=0; i<$bestf.length; i++){
+            var $item = $("<li></li>");
+            $item.text($bestf[i]);
+            $Olist.append($item);
+        }
+        $("body").append($Olist);
+    </script>
+    <br>
+    <script>
+    var $headName = $("<h1></h1>");
+    $headName.text("قائمة الموظفين");
+    $("body").append($headName);
+
+    var $employee = [
+        "Abdurahman",
+        "Saleh",
+        "Ahmed"
+    ];
+    var $list = $("<ul></ul>");
+    for(var i=0; i<$employee.length; i=i+1){
+        createList($employee[i]);
+    }
+
+    function createList(emplyeeName){
+        var $listItem = $('<li></li>');
+        $listItem.text(emplyeeName);
+        $list.append($listItem);
+    }
+
+    $("body").append($list);
+    </script>
+    <br>
+    <script>
+        //لإنشاء عنوان بطريقة forEach
+        var $topic = $('<h1></h1>');
+        $topic.text("طريقة ForEach");
+        $("body").append($topic);
+     
+        var  $topStudent = [
+            "zamel",
+            "abdullah",
+            "mobark"
+        ];
+        var $list = $("<ul></ul>");
+        $topStudent.forEach(createItem);
+        $("body").append($list);
+
+        function createItem(studentName) { 
+            var $listItem = $("<li></li>"); 
+            $listItem.text(studentName);
+            $list.append($listItem);
+        } 
+    </script>
+    <br>
+    <script>
+    var $forHeading = $("<h1></h1>");
+    $forHeading.text("قائمة For Loop");
+    $("body").append($forHeading);
+   
+    var $listLoop = [
+        "loop 1",
+        "loop 2",
+        "loop 3"
+    ];
+
+    var $Olist = $("<ul></ul>");
+
+    for(var i=0; i<$listLoop.length; i=i+1){
+        var $listItem = $('<li></li>');
+        $listItem.text($listLoop[i]);
+        $Olist.append($listItem);
+    }
+
+    $("body").append($Olist);
+    </script>
+
+
+    <script>
+    var $badeelLoop = $("<h1></h1>");
+    $badeelLoop.text("بديل محتويات اللوووب وهوالـ function");
+    $("body").append($badeelLoop);
+
+    var $listLoop = [
+        'loop',
+        'loop',
+        'loop'
+    ];
+
+    var $orderL = $("<ol></ol>");
+    function createItem(newItem){
+        var $listItem = $("<li></li>");
+        $listItem.text(newItem);
+        $orderL.append($listItem);
+    }
+
+    for(var i=0; i<$listLoop.length; i=i+1){
+        createItem($listLoop[i]);
+    }
+
+    $("body").append($orderL);
+    </script>
+
+    <br>
+    <script>
+    var $headForeach = $("<h1></h1>");
+    $headForeach.text("بديل الـ  for Loop وهو forEach");
+    $("body").append($headForeach);
+    
+   var $list = $("<ol></ol>");
+
+            var $items = [
+                "forEeach",
+                "forEach",
+                "forEach"
+            ];
+
+            function createListForeach(listname){
+                var $listItem  = $("<li></li>");
+                $listItem.text(listname);
+                $list.append($listItem);
+            }
+
+            $items.forEach(createListForeach);
+
+            $("body").append($list);
+    </script>
+
+    <br>
+    <!--while-->
+    <script>
+        var $whileTopic = $("<h1></h1>");
+        $whileTopic.text("انشاء قائمة عن طريق الـ while ");
+        $('body').append($whileTopic);
+
+        var $names = [
+            "while",
+            "while",
+            "while"
+        ];
+
+        var $olist = $("<ol></ol>");
+
+        var i =0;
+        while(i<$names.length){
+            var $newlist = $('<li>');
+            $newlist.text($names[i]);
+            $olist.append($newlist);
+            i = i+1;
+            
+        }
+
+        $("body").append($olist);
+    </script>
+
+    <br>
+    <script>
+        var $whileTopic = $("<h1></h1>");
+        $whileTopic.text("طريقة انشاء قائمة عن طريق while loop مع function");
+        $whileTopic.css("color", "blue");
+        $("body").append($whileTopic);
+
+        var $names = [
+            "while",
+            "while",
+            "while"
+        ];
+
+        var $olist = $("<ol></ol>");
+
+        function createlist(namesList){
+            var $newlist = $('<li></li>');
+            $newlist.text(namesList);
+            $olist.append($newlist);
+        }
+        var i =0;
+        while(i<$names.length){
+            createlist($names[i]);
+            i++;
+            
+        }
+
+        $("body").append($olist);
+    </script>
+    
+    <br>
+    <script>
+        var $doWhileTopic = $("<h1></h1");
+        $doWhileTopic.text("انشاء قائمة عن طريق do while");
+        $("body").append($doWhileTopic);
+
+        var $dolist = [
+            "do while",
+            "do while",
+            "do while"
+        ];
+
+        var $olist = $("<ol></ol>");
+
+        var i = 0;
+        do {
+            var $newList = $("<li></li>");
+            $newList.text($dolist[i]);
+            $olist.append($newList);
+            i = i + 1;
+        }
+        while (i<$dolist.length);
+        $("body").append($olist);
+
+    </script>
+    <br>
+    <script>
+        var $doWhileTopic = $("<h1></h1");
+        $doWhileTopic.text("انشاء قائمة بستخدام do while مع function");
+        $doWhileTopic.css("color", "green");
+        $("body").append($doWhileTopic);
+
+        var $dolist = [
+            "do while",
+            "do while",
+            "do while"
+        ];
+
+        var $olist = $("<ol></ol>");
+            
+        var i = 0;
+        do {
+            createByDo($dolist[i]);
+            i = i + 1;
+        }
+        while (i < $dolist.length);
+
+        function createByDo(nameslist){
+            var $newList = $("<li></li>");
+            $newList.text(nameslist);
+            $olist.append($newList);
+        }
+
+        
+        $("body").append($olist);
+    </script>
+
+    <!--الاحداث events-->
+    <br> 
+    <script>
+      $("li").click(function(){
+          var $li = $(this);
+          $li.toggleClass("completed");
+      })
+    </script>
+    <!--لاضافة عنصر في القائمة بستخدام زر الإضافة-->
+    <script>
+        var $form = $('form');
+        function addListItem(e){
+            e.preventDefault();
+            var $input = $("#newItem");
+            var $item = $("<li></li>");
+            $item.text($input.val());
+            var $shopping = $("#shoopingList");
+            $shopping.append($item); 
+        }
+        $form.submit(addListItem);
+    </script>
+    <!--
+    <script>
+        function f(x) {
+            return (2+x) * 4;
+        }
+        result = f(6);
+        document.write(" النتيجية =" + " " + result);
+    </script>
+    <br>
+    <script>
+    var name = prompt("ما هو اسمك");
+    document.write(" مرحبا يا " + name);
+    </script>
+    <br>
+    <br>
+    <script>
+    var firstval = prompt("ادخل القيمة الاولى");
+    var secondval = prompt("ادخل القيمة الثانية");
+    firstval = Number(firstval);
+    secondval = Number(secondval);
+    var sum = firstval + secondval;
+    document.write(" المجموع: " + sum);
+    </script>
+--> 
+
+<!--درس المصفوفة
+    <script>
+        var topf = [
+            "saad",
+            "ziyad",
+            "faisal",
+            "abdurahman"
+        ];
+
+        document.write(topf[2]);
+    </script>
+    <br>
+    <script>
+            var topf = [
+                "saad",
+                "ziyad",
+                "faisal",
+                "abdurahman"
+            ];
+    
+            document.write(topf.length);
+        </script>
+        <br>
+        <script>
+            var topf = [
+                "saad",
+                "ziyad",
+                "faisal",
+                "abdurahman"
+            ];
+    
+            document.write(topf.join());
+        </script>
+        <br>
+        <script>
+            var topf = [
+                "saad",
+                "ziyad",
+                "faisal",
+                "abdurahman"
+            ];
+    
+            document.write(topf.join('-'));
+        </script>
+        <br>
+        <script>
+            var topf = [
+                "saad",
+                "ziyad",
+                "faisal",
+                "abdurahman"
+            ];
+            topf.push("hashem");
+            document.write(topf.join('-'));
+        </script> 
+         <br>
+         <script>
+             var topf = [
+                 "saad",
+                 "ziyad",
+                 "faisal",
+                 "abdurahman"
+             ];
+             topf.pop();
+             document.write(topf.join('-'));
+         </script> 
+          <br>
+          <script>
+              var topf = [
+                  "saad",
+                  "ziyad",
+                  "faisal",
+                  "abdurahman"
+              ];
+              topf.pop();
+              topf.push("hashem");
+              document.write(topf.join('-'));
+          </script> 
+           <br>
+           <script>
+               var topf = [
+                   "saad",
+                   "ziyad",
+                   "faisal",
+                   "abdurahman"
+               ];
+               topf[2]= "hashem";
+               document.write(topf.join('-'));
+           </script> 
+        -->
+        
+    </html>

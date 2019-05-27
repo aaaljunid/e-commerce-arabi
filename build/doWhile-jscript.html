@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html dir="rtl">
+    <head>
+        <title>JavaScript</title>
+        <meta charset="utf-8">
+        <style>
+                .completed
+                {
+                    color : gray ;
+                    text-decoration:line-through;
+                    list-style:disc;
+                }    
+        </style>
+    </head>
+    <body>
+        <h1>قائمة المشتريات</h1>
+        <ul id="shoopingList">
+            <li id="apple">تفاح</li>
+            <li>جزر</li>
+            <li>خوخ</li>
+        </ul>
+        <form>
+            <label>
+                اضف عنصر جديد :
+                <input id="newItem">
+                <input type="submit" value="اضف عنصر">
+            </label>
+        </form>
+        <h1>دورات ارغب بتعلمها</h1>
+        <ol id="courses">
+            <li>تطوير المواقع forentEnd</li>
+            <li>تطوير المواقف backend</li>
+            <li>تطوير تطبيقات الاجهزة الذكية</li>
+        </ol>
+    </body>
+    <script src="js/jquery-slim.min.js"></script>
+    
+    <script>
+        var doWhileTopic = document.createElement("h1");
+        doWhileTopic.textContent = "انشاء قائمة بستخدام do while مع function";
+        document.body.appendChild(doWhileTopic);
+
+        var dolist = [
+            "do while",
+            "do while",
+            "do while"
+        ];
+
+        var olist = document.createElement("ol");
+
+        function createByDo(nameslist){
+            var newList = document.createElement("li");
+            newList.textContent = nameslist;
+            olist.appendChild(newList);
+        }
+
+        var i = 0;
+        do {
+            createByDo(dolist[i]);
+            i = i + 1;
+        }
+        while (i < dolist.length);
+        document.body.appendChild(olist);
+    </script>
+
+</html>
